@@ -2,7 +2,7 @@
 
 # 📊 ATLIQ T-Shirts Q&A App
 
-A fully interactive web application that allows users to ask **natural language questions** about a T-shirts database and receive meaningful answers in real-time. This project combines **Streamlit** for the frontend, **LangChain** with **Google Gemini** for translating natural language to SQL, and **MySQL** for structured data storage. It is designed to be **scalable, portable, and serverless-ready**, and can be deployed effortlessly on **Google Cloud Run**.
+A fully interactive web application that allows users to ask **natural language questions** about a T-shirts database and receive meaningful answers in real-time. This project combines **Streamlit** for the frontend, **LangChain** with **Gemini-2.0-flash** for translating natural language to SQL, and **MySQL** for structured data storage. It is designed to be **scalable, portable, and serverless-ready**, and can be deployed effortlessly on **Google Cloud Run**.
 
 ---
 
