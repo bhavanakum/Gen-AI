@@ -11,3 +11,4 @@ langchain-core==0.3.66  # For langchain_core.pydantic_v1x
 mysql-connector-python>=8.0.31
 langchain-google-genai>=2.1.6
 protobuf>=3.20.2,<4.21.0
+setuptools>=57.0.0
