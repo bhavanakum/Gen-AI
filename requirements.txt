@@ -9,3 +9,4 @@ rich>=10.14.0
 markdown-it-py>=2.2.0
 pygments>=2.13.0
 langchain-core==0.3.66  # For langchain_core.pydantic_v1x
+pip install pymysql
