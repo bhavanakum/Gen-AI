@@ -2,7 +2,7 @@
 
 # 📊 ATLIQ T-Shirts Q&A App:  https://atliq-service-747917912155.us-central1.run.app
 
-A fully interactive web application that allows users to ask **natural language questions** about a T-shirts database and receive meaningful answers in real-time. This project combines **Streamlit** for the frontend, **LangChain** with **Google Gemini 2.0** for translating natural language to SQL, and **Google Cloud SQL (MySQL)** for structured data storage. It is designed to be **scalable, portable, and serverless-ready**, and is deployed on **Google Cloud Run**.
+A fully interactive web application that allows users to ask **natural language questions** about a T-shirts database and receive meaningful answers in real-time. This project combines **Streamlit** for the frontend, **LangChain** with **Google Gemini 2.0** for translating natural language to SQL, and **Google Cloud SQL (MySQL)** for structured data storage. It is designed to be **scalable, portable, and serverless-ready**, and is deployed on **Google Cloud Platform**.
 
 ---
 
