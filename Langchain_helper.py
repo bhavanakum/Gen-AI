@@ -16,7 +16,7 @@ def ChatGoogleGen(question: str):
 
     db_user = "root"
     db_password = "Ziva267"
-    db_host = "localhost"
+    db_host = "127.0.0.1"
     db_name = "atliq_tshirts"
 
     # LangChain SQL database (for schema)
