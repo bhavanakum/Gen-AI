@@ -13,21 +13,22 @@ api_key = os.getenv("GOOGLE_API_KEY")
 
 def ChatGoogleGen(question: str):
     llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.2)
-
-    db_user = "root"
-    db_password = "Ziva267"
-    db_host = "127.0.0.1"
+    # Load DB credentials
+    db_user = "DB_NAME"
+    db_password = "db_password"
     db_name = "atliq_tshirts"
+    cloud_sql_connection_name = os.getenv("CLOUD_SQL_CONNECTION_NAME")  
 
-    # LangChain SQL database (for schema)
-    db = SQLDatabase.from_uri(
-        f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}",
-        include_tables=["t_shirts"],
-        sample_rows_in_table_info=3
-    )
+    # Build Unix socket-based connection URI for Cloud SQL
+    db_uri = f"mysql+pymysql://{db_user}:{db_password}@/{db_name}?unix_socket=/cloudsql/{cloud_sql_connection_name}"
 
-    # SQLAlchemy engine (for execution)
-    engine = create_engine(f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}")
+    print("🔍 DB URI:", db_uri)
+    
+    # LangChain-compatible DB object
+    db = SQLDatabase.from_uri(db_uri, include_tables=["t_shirts"], sample_rows_in_table_info=3)
+
+    # SQLAlchemy engine to execute the final query
+    engine = create_engine(db_uri)
 
     prompt = '''
     You are an SQL expert.
